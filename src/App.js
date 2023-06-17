@@ -29,8 +29,6 @@ const RegistrationPage = React.lazy(() => import("./pages/admin/Registration"));
 const CountryForm = React.lazy(() => import("pages/masterForms/Country"));
 const StateForm = React.lazy(() => import("pages/masterForms/State"));
 const CityForm = React.lazy(() => import("pages/masterForms/City"));
-const MaterialTypeForm = React.lazy(() => import("pages/masterForms/MaterialType"));
-const MaterialAddForm = React.lazy(() => import("pages/masterForms/MaterialType/add"));
 const CountryAddForm = React.lazy(() => import("pages/masterForms/Country/add"));
 const CityAddForm = React.lazy(() => import("pages/masterForms/City/add"));
 const StateAddForm = React.lazy(() => import("pages/masterForms/State/add"));
@@ -38,7 +36,10 @@ const DepartmentAddForm = React.lazy(() => import("pages/masterForms/Department/
 const DesignationAddForm = React.lazy(() => import("pages/masterForms/Designation/add"));
 const UserAddForm = React.lazy(() => import("pages/masterForms/User/add"));
 const DashboardPage = React.lazy(() => import("pages/Dashboard"));
-const MMRequestForm = React.lazy(() => import("pages/materialmovement/newrequest/index"));
+const MaterialTypeForm = React.lazy(() => import("pages/masterForms/MaterialType"));
+const MaterialAddForm = React.lazy(() => import("pages/masterForms/MaterialType/add"));
+const MMRequestForm = React.lazy(() => import("pages/materialmovement/newrequest"))
+
 
 const user = {
   name: 'Someone',
@@ -80,7 +81,6 @@ const App = () => {
               path: "/master-forms",
               errorElement: <p>Error has occured</p>,
               children: [
-                
                 {
                   path: "/master-forms/country/add",
                   element: <CountryAddForm />,
@@ -113,7 +113,10 @@ const App = () => {
                   path: "/master-forms/material",
                   element: <MaterialTypeForm />,
                 },
-               
+                {
+                  path: "/master-forms/material-movement/new",
+                  element: <MMRequestForm />,
+                },
                 {
                   path: "/master-forms/department/add",
                   element: <DepartmentAddForm />
@@ -151,9 +154,8 @@ const App = () => {
                 {
                   path: "/material-movement/new",
                   element: <MMRequestForm />,
-                }
-              ]
-            },
+                },]
+              },
             {
               path: "/cpgc",
               errorElement: <p>Error has occured</p>,

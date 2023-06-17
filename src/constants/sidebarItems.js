@@ -59,7 +59,8 @@ export const MENUITEMS = [
             active: false,
             selected: false,
             title: 'City'
-          },{
+          },
+          {
             path: `${process.env.PUBLIC_URL}/master-forms/material`,
             type: 'link',
             active: false,
@@ -104,7 +105,7 @@ export const MENUITEMS = [
     ]
   },
   {
-    menutitle: 'MATERIAL MOVEMENT',
+    menutitle: 'Material Movement',
     Items: [
       {
         path: `${process.env.PUBLIC_URL}/material-movement`,
@@ -115,16 +116,14 @@ export const MENUITEMS = [
         title: 'Material Movement',
         children: [
           {
-          path: `${process.env.PUBLIC_URL}/material-movement/new`,
-          type: 'link',
-          active: false,
-          selected: false,
-          title: 'New Request'
-        },
-      ]
+            path: `${process.env.PUBLIC_URL}/material-movement/new`,
+            type: 'link',
+            active: false,
+            selected: false,
+            title: 'Material Movement'
+          },]
+      }]
   },
-]
-},
   {
     menutitle: 'VENDORS',
     Items: [
