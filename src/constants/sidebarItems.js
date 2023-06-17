@@ -59,6 +59,12 @@ export const MENUITEMS = [
             active: false,
             selected: false,
             title: 'City'
+          },{
+            path: `${process.env.PUBLIC_URL}/master-forms/material`,
+            type: 'link',
+            active: false,
+            selected: false,
+            title: 'Material Type'
           },
         ]
       },
@@ -97,6 +103,28 @@ export const MENUITEMS = [
       }
     ]
   },
+  {
+    menutitle: 'MATERIAL MOVEMENT',
+    Items: [
+      {
+        path: `${process.env.PUBLIC_URL}/material-movement`,
+        icon: 'ti-home',
+        type: 'sub',
+        active: false,
+        selected: false,
+        title: 'Material Movement',
+        children: [
+          {
+          path: `${process.env.PUBLIC_URL}/material-movement/new`,
+          type: 'link',
+          active: false,
+          selected: false,
+          title: 'New Request'
+        },
+      ]
+  },
+]
+},
   {
     menutitle: 'VENDORS',
     Items: [
