@@ -1,0 +1,48 @@
+.dala-login {
+  &-wrapper-bg {
+    // background-color: var(--primary-bg-color);
+    background-image: url("./assets/img/bg.png");
+    border-radius: 0%;
+    background-size: cover;
+  }
+  &-card-wrapper {
+    overflow: hidden;
+  }
+}
+
+.dala-carousel-img-size {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.slick-slide img {
+  margin-bottom: -10px;
+}
+
+.profile-cover__img {
+  top: 50px !important;
+}
+
+.profile-cover__action {
+  border-radius: 5px !important;
+}
+
+.signpages.width70 {
+  width: 70%;
+}
+
+.action-icons {
+  font-size: 24px;
+  text-align: center;
+}
+.action-icons i.typcn {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.typcn-delete {
+  color: #f14a4a;
+}
+.mr-2 {
+  margin-right: 10px;
+}
