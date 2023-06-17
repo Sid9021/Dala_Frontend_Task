@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { TextField, Select, MenuItem, FormControl, InputLabel, Button, Grid, Container, Typography } from '@mui/material';
 
 const MMRequestForm = () => {
@@ -6,7 +6,11 @@ const MMRequestForm = () => {
     event.preventDefault();
     // Handle form submission logic here
   };
+  const dateInputRef = useRef(null);
 
+  const handleDateClick = () => {
+    dateInputRef.current.click();
+  };
   return (
     <Container maxWidth="xl">
       <Typography variant="h4" align="center" gutterBottom>
@@ -15,10 +19,11 @@ const MMRequestForm = () => {
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
-            <TextField label="Total No of Products" fullWidth />
+            <TextField  label="Total No of Products" fullWidth  />
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
-            <TextField label="Weight (In Tons)" fullWidth />
+            <TextField label="Weight (In Tons)" fullWidth s  />
           </Grid>
           <Grid item xs={12} sm={4}>
             <FormControl fullWidth>
@@ -29,8 +34,9 @@ const MMRequestForm = () => {
               </Select>
             </FormControl>
           </Grid>
+          <Grid item xs={12} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
-            <TextField label="Pickup Address" multiline rows={4} fullWidth />
+            <TextField label="Pickup Address"  fullWidth />
           </Grid>
           <Grid item xs={12} sm={4}>
             <FormControl fullWidth>
@@ -44,6 +50,7 @@ const MMRequestForm = () => {
               </Select>
             </FormControl>
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
             <FormControl fullWidth>
               <InputLabel>Pickup State</InputLabel>
@@ -55,12 +62,14 @@ const MMRequestForm = () => {
           <Grid item xs={12} sm={4}>
             <TextField label="Pickup City" fullWidth />
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
             <TextField label="Drop Location Address Line 1" fullWidth />
           </Grid>
           <Grid item xs={12} sm={4}>
             <TextField label="Drop Location Address Line 2" fullWidth />
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
             <TextField label="Drop Location Address Line 3" fullWidth />
           </Grid>
@@ -76,6 +85,7 @@ const MMRequestForm = () => {
               </Select>
             </FormControl>
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
             <FormControl fullWidth>
               <InputLabel>Drop Location State</InputLabel>
@@ -87,6 +97,7 @@ const MMRequestForm = () => {
           <Grid item xs={12} sm={4}>
             <TextField label="Drop Location City" fullWidth />
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
             <input type="file" id="invoice-upload" />
             <label htmlFor="invoice-upload">Invoice Upload</label>
@@ -95,8 +106,18 @@ const MMRequestForm = () => {
             <input type="file" id="material-images-upload" multiple />
             <label htmlFor="material-images-upload">Material / Stock Images</label>
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
-            <TextField label="Pick Up Date" type="date" fullWidth />
+          <FormControl fullWidth>
+              <InputLabel htmlFor="pick-up-date">Pick Up Date</InputLabel>
+              <TextField
+                id="pick-up-date"
+                type="date"
+                inputProps={{ style: { cursor: 'pointer' }, onClick: handleDateClick }}
+                inputRef={dateInputRef}
+                fullWidth
+              />
+            </FormControl>
           </Grid>
           <Grid item xs={12} sm={4}>
             <FormControl fullWidth>
@@ -108,12 +129,14 @@ const MMRequestForm = () => {
               </Select>
             </FormControl>
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
-            <TextField label="Additional Remarks" multiline rows={4} fullWidth />
+            <TextField label="Additional Remarks" fullWidth />
           </Grid>
           <Grid item xs={12} sm={4}>
             <TextField label="Contact Person Name" fullWidth />
           </Grid>
+          <Grid item xs={8} sm={4} /> {/* Empty Grid item to take up remaining space */}
           <Grid item xs={12} sm={4}>
             <TextField label="Contact Person Phone" fullWidth />
           </Grid>
