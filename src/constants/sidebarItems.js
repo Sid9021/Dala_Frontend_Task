@@ -120,7 +120,7 @@ export const MENUITEMS = [
             type: 'link',
             active: false,
             selected: false,
-            title: 'Material Movement'
+            title: 'New Request'
           },]
       }]
   },
